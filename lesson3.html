@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        'use strict'
+
+        // Задание 1
+
+        let arr = []
+
+        let a = 2;
+
+        while (a <= 100) {
+            let check = true;
+            for (let i = 2; i < a; i++) {
+                if (a % i === 0) {
+                    check = false;
+                    break;
+                }
+            }
+            if (check) arr.push(a)
+            a++;
+        }
+
+        console.log(arr);
+
+    </script>
+
+    <script>
+
+        // Задание 2
+
+        let basket = [
+            {
+                product: "груша",
+                price: 100
+            },
+            {
+                product: "яблоко",
+                price: 150
+            },
+            {
+                product: "банан",
+                price: 130
+            },
+            {
+                product: "ананас",
+                price: 195
+            }
+        ];
+
+        function countBasketPrice(basket) {
+            let BasketPrice = 0;
+            for (let product of basket) {
+                BasketPrice += product.price;
+            }
+            return BasketPrice;
+        }
+
+        alert(countBasketPrice(basket));
+
+    </script>
+
+    <script>
+
+        // Задание 3
+
+        for (let i = 0; i < 10; console.log(i++)) { }
+
+
+    </script>
+
+
+
+</body>
+
+</html>
