@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        // Задание 1
+
+        'use strict'
+
+
+        function NumToObj(num) {
+            let arrNumber = num.split('');
+            while (arrNumber.length < 3) {
+                arrNumber.unshift(0);
+            }
+            let objNumber = {};
+            if (arrNumber.length > 3) {
+                return null;
+            }
+            else {
+                objNumber['сотни'] = +arrNumber[0];
+                objNumber['десятки'] = +arrNumber[1];
+                objNumber['единицы'] = +arrNumber[2];
+                return objNumber;
+            }
+        }
+
+        let number = prompt("Input number");
+        let obj = NumToObj(number);
+
+        if (obj == null) {
+            console.log("Object is null");
+        }
+        else {
+            console.log(obj);
+        }
+
+        // С магазином пока не успел, доcдам в ближайшее время!!!
+
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>
