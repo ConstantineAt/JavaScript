@@ -43,7 +43,73 @@
             console.log(obj);
         }
 
-        // С магазином пока не успел, доcдам в ближайшее время!!!
+
+
+    </script>
+
+    <script>
+
+        // Задание 2
+
+        function addProductBasket(arr, name, price, quantity) {
+            arr.push({
+                product: name,
+                price: price,
+                quantity: quantity,
+                total: totalSum
+            });
+        }
+
+        function totalSum() {
+            return this.price * this.quantity;
+        }
+
+        let basket = [
+            {
+                product: "груша",
+                price: 100,
+                quantity: 3,
+                total: totalSum
+            },
+            {
+                product: "яблоко",
+                price: 150,
+                quantity: 5,
+                total: totalSum
+            },
+            {
+                product: "банан",
+                price: 130,
+                quantity: 2,
+                total: totalSum
+            },
+            {
+                product: "ананас",
+                price: 195,
+                quantity: 1,
+                total: totalSum
+            }
+        ];
+
+        function countBasketPrice(arr) {
+            var sum = 0;
+            for (var i = 0; i < arr.length; i++) {
+                sum += arr[i].total();
+            }
+            return sum;
+        }
+
+        function descBasketPrice(arr) {
+            var str = '';
+            for (var i = 0; i < arr.length; i++) {
+                str += (i + 1) + '. ' + arr[i].product + ' - ' + arr[i].price + ' * ' + arr[i].quantity + ' = ' + (arr[i].total()) + '\n';
+            }
+            return str;
+        }
+
+        alert('В корзину добавлены следующие товары:\n' + descBasketPrice(basket) + '\nОбщая стоимость составляет: ' + countBasketPrice(basket));
+
+
 
     </script>
 
